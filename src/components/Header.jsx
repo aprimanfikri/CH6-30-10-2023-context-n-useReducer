@@ -3,6 +3,7 @@ import { useRef } from "react";
 import CartModal from "./CartModal.jsx";
 import { CartContext } from "../store/shoppingCart.jsx";
 import { useContext } from "react";
+import Button from "./Button.jsx";
 
 export default function Header() {
   const { items } = useContext(CartContext);
@@ -35,6 +36,8 @@ export default function Header() {
         </div>
         <p>
           <button onClick={handleOpenCartClick}>Cart ({cartQuantity})</button>
+          {/* <Button className="cart">Cart ({cartQuantity})</Button>
+          <Button className="wishlist">Wishlist ({cartQuantity})</Button> */}
         </p>
       </header>
     </>
